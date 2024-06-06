@@ -6,13 +6,15 @@
 
     https://www.npmjs.com/package/mysql2
 
-##### Crear una BD en MySQL
+##### Crear una BD en el gestor de base de datos MySQL
 
     bd_nextjs_mysql
 
 ## Instalar dependencias del proyecto
 
     npm install
+
+##### Crear el archivo db.js en src/lib, para configurar la conexión a la base de datos
 
 First, run the development server:
 
