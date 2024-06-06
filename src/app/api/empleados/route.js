@@ -1,4 +1,4 @@
-import { query } from "../../../lib/db";
+import { query } from "@/lib/db";
 import { NextResponse } from "next/server";
 // import axios from "axios";
 
@@ -22,14 +22,36 @@ export async function POST(request) {
     const { nombre, edad, cedula, sexo, telefono, cargo } = await request.json();
     // console.log(nombre, edad, cedula, sexo, telefono, cargo);
 
-    //const MiQuery =
+    // Validar que todos los campos necesarios están presentes
+    if (!nombre || !edad || !cedula || !sexo || !telefono || !cargo) {
+      return NextResponse.json(
+        {
+          message: "Todos los campos son obligatorios: nombre, edad, cedula, sexo, telefono, cargo",
+        },
+        { status: 400 }
+      );
+    }
+
+    // Realizar la consulta para insertar un nuevo empleado
     const result = await query({
       query:
-        "INSERT INTO tbl_empleados (nombre, edad, cedula, sexo, telefono, cargo) VALUES (?,?,?,?,?,?)",
+        "INSERT INTO tbl_empleados (nombre, edad, cedula, sexo, telefono, cargo) VALUES (?, ?, ?, ?, ?, ?)",
       values: [nombre, edad, cedula, sexo, telefono, cargo],
     });
 
-    return NextResponse.json({ nombre, edad, cedula, sexo, telefono, cargo, id: result.insertId });
+    return NextResponse.json({
+      message: "Empleado insertado correctamente",
+      empleado: {
+        id: result.insertId,
+        nombre,
+        edad,
+        cedula,
+        sexo,
+        telefono,
+        cargo,
+      },
+    });
+    // return NextResponse.json({ nombre, edad, cedula, sexo, telefono, cargo, id: result.insertId });
   } catch (error) {
     return NextResponse.json(
       { message: error.message },

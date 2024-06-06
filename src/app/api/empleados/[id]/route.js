@@ -28,6 +28,8 @@ export async function GET(request, context) {
 
 // Método DELETE para eliminar un empleado por ID
 export async function DELETE(request, context) {
+  // const { id } = await request.json();
+  // console.log(id);
   const { id } = context.params;
 
   try {

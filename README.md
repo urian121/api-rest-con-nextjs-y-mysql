@@ -1,5 +1,7 @@
 # Como conectar MySQL con Next.js
 
+##### Conexión de MySQL con Next.js: Recuperación de Datos a través de una API
+
 # Instalar el paquete (driver) mysql2 para conectar MySQL con Next.js
 
     npm install --save mysql2
@@ -54,24 +56,23 @@ Acceder a la URL en tu navegador [http://localhost:3000](http://localhost:3000)
     Para eliminar un registro de acuerdo a su ID
     http://localhost:3000/api/empleados/35
 
----
+##### Código para el aechivo .env
+
+    MYSQL_HOST ="localhost"
+    MYSQL_PORT ="3306"
+    MYSQL_DATABASE ="bd_nextjs_mysql"
+    MYSQL_USER ="root"
+    MYSQL_PASSWORD =
+
+
+
 
     async function loadProduct() {
         const { data } = await axios.get("http://localhost:3000/api/products");
         console.log(data);
         return data;
-    }
 
-    async function ProductsPage() {
-        const products = await loadProduct();
-
-        if (products.length === 0) return <h1>No Products</h1>;
-
-        return (
-            <div className="grid gap-4 grid-cols-1 md:grid-cols-4">
-            {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
-            ))}
-            </div>
-        );
+        const response = await axios.get("/api/getData"); // Ruta de tu API
+        const { data } = response;
+        return NextResponse.json(data);
     }
