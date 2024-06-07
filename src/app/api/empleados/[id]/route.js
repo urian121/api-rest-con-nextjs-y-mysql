@@ -1,4 +1,4 @@
-import { query } from "../../../../lib/db";
+import { query } from "@/lib/db";
 import { NextResponse } from "next/server";
 
 /**
@@ -59,11 +59,11 @@ export async function DELETE(request, context) {
 // Método PUT para actualizar un empleado por ID
 export async function PUT(request, context) {
   // Obtener el ID del contexto
-  const { id } = context.params;
+  // const { id } = context.params;
 
   try {
     // Se leen los datos del empleado del cuerpo de la solicitud
-    const { nombre, edad, cedula, sexo, telefono, cargo } = await request.json();
+    const { id, nombre, edad, cedula, sexo, telefono, cargo } = await request.json();
     console.log(`Actualizando empleado con ID: ${id}`);
     console.log(
       `Nuevos datos - Nombre: ${nombre}, Edad: ${edad}, Cédula: ${cedula}, Sexo: ${sexo}, Teléfono: ${telefono}, Cargo: ${cargo}`

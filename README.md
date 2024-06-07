@@ -1,6 +1,6 @@
 # Como conectar MySQL con Next.js
 
-##### Conexión de MySQL con Next.js: Recuperación de Datos a través de una API
+##### Conexión de MySQL con Next.js: Recuperación de Datos a través de una API, este proyecto integra una base de datos MySQL con una aplicación Next.js para crear una API eficiente de recuperación de datos. Se establecerá una conexión segura utilizando bibliotecas como mysql2 o sequelize, y se desarrollarán endpoints en Next.js para manejar consultas SQL. El objetivo es proporcionar una solución escalable y eficiente para la manipulación de datos, ideal para aplicaciones web modernas.
 
 # Instalar el paquete (driver) mysql2 para conectar MySQL con Next.js
 
@@ -11,10 +11,6 @@
 ##### Crear una BD en el gestor de base de datos MySQL
 
     bd_nextjs_mysql
-
-##### Instalar Axios para hacer peticiones HTTP
-
-    npm install axios
 
 ##### Crear el archivo db.js en src/lib, para configurar la conexión a la base de datos
 
@@ -64,15 +60,15 @@ Acceder a la URL en tu navegador [http://localhost:3000](http://localhost:3000)
     MYSQL_USER ="root"
     MYSQL_PASSWORD =
 
+##### Resultado final
 
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/api-rest-next-mysql.png)
 
+### Expresiones de Gratitud 🎁
 
-    async function loadProduct() {
-        const { data } = await axios.get("http://localhost:3000/api/products");
-        console.log(data);
-        return data;
+    Comenta a otros sobre este proyecto 📢
+    Invita una cerveza 🍺 o un café ☕
+    Paypal iamdeveloper86@gmail.com
+    Da las gracias públicamente 🤓.
 
-        const response = await axios.get("/api/getData"); // Ruta de tu API
-        const { data } = response;
-        return NextResponse.json(data);
-    }
+## No olvides SUSCRIBIRTE 👍

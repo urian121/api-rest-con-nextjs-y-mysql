@@ -1,6 +1,5 @@
 import { query } from "@/lib/db";
 import { NextResponse } from "next/server";
-// import axios from "axios";
 
 // Función con el metodo GET, esta retorna un JSON con todos los registros
 export async function GET() {
