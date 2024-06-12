@@ -33,23 +33,23 @@ Acceder a la URL en tu navegador [http://localhost:3000](http://localhost:3000)
 
 ##### Métodos (GET, POST, PUT, DELETE) para realizar las peticiones HTTP
 
-    Para obtener todos los registros
+    Para obtener todos los registros (GET)
     http://localhost:3000/api/empleados
 
 
-    Para obtener un solo registro de acuerdo a su ID
+    Para obtener un solo registro de acuerdo a su ID (GET)
     http://localhost:3000/api/empleados/4
 
 
-    Para insertar un nuevo registro
+    Para insertar un nuevo registro (POST)
     http://localhost:3000/api/empleados
 
 
-    Para actualizar un registro de acuerdo a su ID
+    Para actualizar un registro de acuerdo a su ID (PUT)
     http://localhost:3000/api/empleados/34
 
 
-    Para eliminar un registro de acuerdo a su ID
+    Para eliminar un registro de acuerdo a su ID (DELETE)
     http://localhost:3000/api/empleados/35
 
 ##### Código para el aechivo .env
