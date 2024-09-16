@@ -4,7 +4,7 @@
 
 ##### En Next.js, las API Routes permiten crear puntos finales de API directamente dentro de la aplicación Next.js. Estas rutas son útiles para manejar solicitudes HTTP, realizar operaciones CRUD (crear, leer, actualizar, eliminar) y comunicarse con bases de datos o servicios externos, todo dentro del mismo entorno de la aplicación.
 
-# Instalar el paquete (driver) mysql2 para conectar MySQL con Next.js
+##### Instalar el paquete (driver) mysql2 para conectar MySQL con Next.js
 
     npm install --save mysql2
 
