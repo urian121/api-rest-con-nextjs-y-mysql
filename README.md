@@ -16,7 +16,7 @@
 
 ##### Crear el archivo db.js en src/lib, para configurar la conexión a la base de datos
 
-## Instalar dependencias del proyecto
+##### Instalar dependencias del proyecto
 
     npm install
     Luego ejecutar los siguientes comandos:
